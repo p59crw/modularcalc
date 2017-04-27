@@ -1,56 +1,55 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Modular Calculator</title>
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="assets/js/calculator-interface.js"></script>
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div id="container">
-      <h1>Modular Calculator</h1>
-      <div id="layout-init">
-        <div id="result" class="ui-button ui-widget draggable resizable snaptarget btn-style"></div>
-        <div class="rows">
-          <button id="delete" class="ui-button ui-widget draggable deletable snaptarget btn-style">Del</button>
-          <button value="%" class="ui-button ui-widget draggable deletable snaptarget btn-style operator">%</button>
-          <button value="+" class="ui-button ui-widget draggable deletable snaptarget btn-style align operator">+</button>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Modular Calculator</title>
+        <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/interact.js"></script>
+        <script type="text/javascript" src="assets/js/calculator-interface.js"></script>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="container">
+            <h1>Modular Calculator</h1>
+            <div id="layout-init">
+                <div id="result" class="ui-button ui-widget draggable resizable snaptarget btn-style"></div>
+                <div class="rows">
+                    <button id="delete" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style">Del</button>
+                    <button value="%" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style operator">%</button>
+                    <button value="+" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style align operator">+</button>
+                </div>
+                <div class="rows">
+                    <button value="7" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style first-child num">7</button>
+                    <button value="8" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style num">8</button>
+                    <button value="9" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style num">9</button>
+                    <button value="-" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style operator">-</button>
+                </div>
+                <div class="rows">
+                    <button value="4" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style first-child num">4</button>
+                    <button value="5" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style num">5</button>
+                    <button value="6" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style num">6</button>
+                    <button value="*" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style operator">x</button>
+                </div>
+                <div class="rows">
+                    <button value="1" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style first-child num">1</button>
+                    <button value="2" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style num">2</button>
+                    <button value="3" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style num">3</button>
+                    <button value="/" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style fall-back operator">/</button>
+                </div>
+                <div class="rows">
+                    <button value="." class="ui-button ui-widget draggable resizable deletable snaptarget btn-style first-child period">.</button>
+                    <button value="0" id="#delete" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style align zero">0</button>
+                    <button value="=" id="eqn-bg" class="ui-button ui-widget draggable resizable deletable snaptarget btn-style align eqn">=</button>
+                </div>
+                <div id="toolbar" class="ui-widget draggable resizable snaptarget btn-style">
+                    <a href="#" id="snap-toggle" class="toolbar-button">snap on</a>
+                </div>
+            </div>
         </div>
-        <div class="rows">
-          <button value="7" class="ui-button ui-widget draggable deletable snaptarget btn-style first-child num">7</button>
-          <button value="8" class="ui-button ui-widget draggable deletable snaptarget btn-style num">8</button>
-          <button value="9" class="ui-button ui-widget draggable deletable snaptarget btn-style num">9</button>
-          <button value="-" class="ui-button ui-widget draggable deletable snaptarget btn-style operator">-</button>
-        </div>
-        <div class="rows">
-          <button value="4" class="ui-button ui-widget draggable deletable snaptarget btn-style first-child num">4</button>
-          <button value="5" class="ui-button ui-widget draggable deletable snaptarget btn-style num">5</button>
-          <button value="6" class="ui-button ui-widget draggable deletable snaptarget btn-style num">6</button>
-          <button value="*" class="ui-button ui-widget draggable deletable snaptarget btn-style operator">x</button>
-        </div>
-        <div class="rows">
-          <button value="1" class="ui-button ui-widget draggable deletable snaptarget btn-style first-child num">1</button>
-          <button value="2" class="ui-button ui-widget draggable deletable snaptarget btn-style num">2</button>
-          <button value="3" class="ui-button ui-widget draggable deletable snaptarget btn-style num">3</button>
-          <button value="/" class="ui-button ui-widget draggable deletable snaptarget btn-style fall-back operator">/</button>
-        </div>
-        <div class="rows">
-          <button value="." class="ui-button ui-widget draggable deletable snaptarget btn-style first-child period">.</button>
-          <button value="0" id="#delete" class="ui-button ui-widget draggable deletable snaptarget btn-style align zero">0</button>
-          <button value="=" id="eqn-bg" class="ui-button ui-widget draggable deletable snaptarget btn-style align eqn">=</button>
-        </div>
-        <div id="toolbar" class="ui-widget draggable resizable snaptarget btn-style">
-          <a href="#" id="snap-toggle" class="toolbar-button">snap on</a>
-		  <a href="#" id="resize-toggle" class="toolbar-button">resize off</a>
-		  <a href="#" id="delete-mode-toggle" class="toolbar-button">delete mode off</a>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
