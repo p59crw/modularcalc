@@ -1,0 +1,120 @@
+/*
+ * Styles for HTML body and calculator interface
+ */
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-family: Open Sans Light, Lato, Roboto, Open Sans, Verdana, Arial;
+  font-size: 48px;
+}
+
+#toolbar {
+  width: 80%;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin: 10px auto;
+  background-color: #dd2222;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+#layout-init {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+/*
+ * Calc Interface
+ */
+button {
+  border: 1px #000000;
+}
+
+#result {
+  font-family: sans-serif;
+  width: 100%;
+  height: 40px;
+  margin: 0px auto;
+  text-align: right;
+  border: 1px solid #000000;
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 36px;
+  outline: none;
+  overflow: hidden;
+  letter-spacing: 4px;
+}
+
+#result:hover {
+  cursor: text;
+}
+
+#first-rows {
+	width: 50%;
+  margin: 10px auto;
+}
+
+.rows {
+  width: 50%;
+  margin: 10px auto;
+}
+
+#delete {
+  width: 212px;
+  height: 100px;
+  margin-left: 25px;
+  border-radius: 4px;
+}
+
+/* Aligning the division and dot button properly */
+.fall-back {
+  margin-left: 3px !important;
+}
+
+/* Aligning the addition and equals to button properly */
+.align {
+  margin-left: 6px !important;
+}
+
+/* Button styling */
+.btn-style {
+  width: 100px;
+  height: 100px;
+  margin-left: 5px;
+  border-radius: 4px;
+  font-size: 32px;
+  background-color: #efefef;
+}
+
+.eqn {
+  width:210px;
+  height: 100px;
+  margin-left: 0px;
+  border-radius: 4px;
+}
+
+.first-child {
+  margin-left: 25px;
+}
+
+/*
+ * Toolbar Styles
+ */
+a:link, a:visited, a:hover, a:active {
+	font-variant: small-caps;
+	font-size: 28px;
+	color: #000000;
+    text-decoration: none;
+	margin: 5px;
+}
