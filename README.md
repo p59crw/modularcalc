@@ -17,3 +17,10 @@ Elements can be dragged, resized, removed, and connected to other elements to fo
 - Add extended math functionality.
 - Add docking mode which allows toolbar to be docked and undocked from edges of browser.
 - Improve interface styles.
+
+#### How to Use
+- Click calculator buttons to use similar to a Windows or Android calculator. Results are displayed in the top display bar.
+- Select and hold the center of an element without dragging to delete it.
+- Select and hold an element while dragging to move it.
+- Hold an edge of an element and drag to resize the element in that direction.
+- Click "Snap On" to toggle Snap Mode on and off. When on, elements will snap to the outer edges of other elements. When off, elements will drag smoothly without catching to any edges.
