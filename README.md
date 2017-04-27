@@ -14,9 +14,6 @@ Elements can be dragged, resized, removed, and connected to other elements to fo
 
 #### TO-DO:
 - Add extra DOM logic so that elements can be joined in clusters which move together.
-- Fix broken Delete logic.
 - Add extended math functionality.
-- Fix issue where inputting any string into the result bar prevents resizing.
 - Add docking mode which allows toolbar to be docked and undocked from edges of browser.
 - Improve interface styles.
-- Fix issue where adding resizing tabs to horizontally aligned elements pushes them to align vertically despite there being enough space to fit them in original alignment.
