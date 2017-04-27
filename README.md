@@ -18,7 +18,7 @@ Elements can be dragged, resized, removed, and connected to other elements to fo
 - Add docking mode which allows toolbar to be docked and undocked from edges of browser.
 - Improve interface styles.
 
-#### How to Use
+#### How to Use:
 - Click calculator buttons to use similar to a Windows or Android calculator. Results are displayed in the top display bar.
 - Select and hold the center of an element without dragging to delete it.
 - Select and hold an element while dragging to move it.
