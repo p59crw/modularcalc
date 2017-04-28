@@ -132,9 +132,11 @@ window.onload = function() {
     document.querySelector(".zero").addEventListener("click", function() {
         zero = this.value;
         if (screen.innerHTML === "") {
-            output = screen.innerHTML = zero;
-        } else if (screen.innerHTML === output) {
-            output = screen.innerHTML += zero;
+            output = screen.innerHTML = "0";
+        } else if (screen.innerHTML.includes(operator)) {
+			output = screen.innerHTML += "0";
+		} else if (screen.innerHTML === output) {
+            output = screen.innerHTML += "0";
         }
     }, false);
 	
@@ -142,8 +144,11 @@ window.onload = function() {
         period = this.value;
         if (screen.innerHTML === "") {
             output = screen.innerHTML = screen.innerHTML.concat("0.");
-        } else if (screen.innerHTML === output) {
+        } else if (screen.innerHTML.substring(output.length - 2, output.length - 1) == ".") {
+			output = screen.innerHTML;
+		} else if (screen.innerHTML === output) {
             screen.innerHTML = screen.innerHTML.concat(".");
+			output = screen.innerHTML;
         }
     }, false);
 	
