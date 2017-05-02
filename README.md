@@ -10,7 +10,7 @@ Elements can be dragged, resized, removed, and connected to other elements to fo
 - `style.css` contains custom styles which override the default styles added by jQueryUI's style sheets.
 - `jquery-ui.css` contains the default styles for the jQuery interface.
 - `jquery-ui.js` contain the framework for allowing objects to be interacted with. 
-- My custom JS file `calculator-interface.js` provides the calls to jQueryUI which add the interactive behavior. Added conditional logic allows the Toolbar to toggle functionality as needed. The secod half of the file contains the calculator logic so that simple math can be carried out and displayed on the result bar.
+- My custom JS file `calculator-interface.js` provides the calls to jQueryUI which add the interactive behavior. Added conditional logic allows the Toolbar to toggle functionality as needed. The second half of the file contains the calculator logic so that simple math can be carried out and displayed on the result bar.
 
 #### TO-DO:
 - Add extra DOM logic so that elements can be joined in clusters which move together.
