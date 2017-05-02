@@ -1,5 +1,5 @@
 window.onload = function() {
-	
+
     /*
      * JQuery Interface Functions
      */
@@ -19,7 +19,7 @@ window.onload = function() {
             cancel: false
         });
     });
-	
+
     /*
      * Toolbar Functions
      */
@@ -60,7 +60,7 @@ window.onload = function() {
             snaptoggle.innerHTML = "snap on";
         }
     }, false);
-	
+
     /*
      * Interact JS Functions
      * Interact is required for resizing as an issue in jQueryUI causes elements to fall out of alignment.
@@ -92,14 +92,14 @@ window.onload = function() {
             target.setAttribute('data-x', x);
             target.setAttribute('data-y', y);
         });
-		
+
     // Delete
     interact('.deletable')
         .on('hold', function(event) {
             $(event.target).remove();
             event.preventDefault();
         });
-		
+
     /*
      * Calculator Functions
      */
@@ -108,11 +108,11 @@ window.onload = function() {
         output,
         limit,
         zero,
-        period,
+        decimal,
         operator;
-		
+
     screen = document.getElementById("result");
-	
+
     var elem = document.querySelectorAll(".num");
     var len = elem.length;
     for (var i = 0; i < len; i++) {
@@ -123,35 +123,35 @@ window.onload = function() {
             }
             output = screen.innerHTML += num;
             limit = output.length;
-            if (limit > 16) {
-                alert("Sorry no more input is allowed");
+            if (limit > 24) {
+                alert("Max input reached");
             }
         }, false);
     }
-	
+
     document.querySelector(".zero").addEventListener("click", function() {
         zero = this.value;
         if (screen.innerHTML === "") {
             output = screen.innerHTML = "0";
         } else if (screen.innerHTML.includes(operator)) {
-			output = screen.innerHTML += "0";
-		} else if (screen.innerHTML === output) {
+            output = screen.innerHTML += "0";
+        } else if (screen.innerHTML === output) {
             output = screen.innerHTML += "0";
         }
     }, false);
-	
-    document.querySelector(".period").addEventListener("click", function() {
-        period = this.value;
+
+    document.querySelector(".decimal").addEventListener("click", function() {
+        decimal = this.value;
         if (screen.innerHTML === "") {
             output = screen.innerHTML = screen.innerHTML.concat("0.");
-        } else if (screen.innerHTML.substring(output.length - 2, output.length - 1) == ".") {
-			output = screen.innerHTML;
-		} else if (screen.innerHTML === output) {
+        } else if (screen.innerHTML.includes(".") && !screen.innerHTML.includes(operator)) {
+            output = screen.innerHTML;
+        } else if (screen.innerHTML === output && !output.substr(output.indexOf(operator) + 2).includes(".")) {
             screen.innerHTML = screen.innerHTML.concat(".");
-			output = screen.innerHTML;
+            output = screen.innerHTML;
         }
     }, false);
-	
+
     document.querySelector("#eqn-bg").addEventListener("click", function() {
         if (screen.innerHTML === "") {
             screen.innerHTML = "0";
@@ -163,7 +163,7 @@ window.onload = function() {
             screen.innerHTML = eval(output);
         }
     }, false);
-	
+
     document.querySelector("#delete").addEventListener("click", function() {
         if (screen.innerHTML === "undefined" || screen.innerHTML === "") {
             screen.innerHTML = "";
@@ -173,7 +173,7 @@ window.onload = function() {
             output = output.substr(0, output.length - 1);
         }
     }, false);
-	
+
     var elem1 = document.querySelectorAll(".operator");
     var len1 = elem1.length;
     for (var i = 0; i < len1; i++) {
