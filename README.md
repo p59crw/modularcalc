@@ -3,7 +3,7 @@ Customizable online calculator using HTML, CSS, jQuery &amp; jQueryUI.
 
 Elements can be dragged, resized, removed, and connected to other elements to form clusters as needed to create a calculator environment tailored to the specific types of calculations the user wishes to make.
 
-#### Website: modularcalc.curtisrwhite.com
+#### Website: http://www.curtiswhite.ca/modularcalc/index.html
 
 #### File List:
 - `index.html` houses the layout. Each element is connected to a CSS class name used by jQueryUI to give it interactive functionality.
